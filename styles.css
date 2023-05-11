@@ -1,8 +1,65 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
 .container {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    height: 100vh;
-    background-color: beige;
-    /* width: 100%; */
+    height: 100%;
+    background-color: honeydew;
+}
+
+.active {
+    transform: scale(1.02);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem darkcyan;
+}
+
+
+.rainbow {
+    animation: colors 10s ease-in-out infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-color: #ff0000; /* red */
+    }
+    8.33% {
+        background-color: #ff4000; /* orange-red */
+    }
+    16.66% {
+        background-color: #ff8000; /* orange */
+    }
+    25% {
+        background-color: #ffbf00; /* yellow-orange */
+    }
+    33.33% {
+        background-color: #ffff00; /* yellow */
+    }
+    41.66% {
+        background-color: #bfff00; /* yellow-green */
+    }
+    50% {
+        background-color: #00ff00; /* green */
+    }
+    58.33% {
+        background-color: #00ff80; /* cyan-green */
+    }
+    66.66% {
+        background-color: #00ffff; /* cyan */
+    }
+    75% {
+        background-color: #0080ff; /* blue-cyan */
+    }
+    83.33% {
+        background-color: #0000ff; /* blue */
+    }
+    91.66% {
+        background-color: #8000ff; /* magenta-blue */
+    }
+    100% {
+        background-color: #ff0000; /* red */
+    }
 }
